@@ -17,21 +17,24 @@ export default class Provider extends React.Component
 			"suburb":undefined,
 			"state":undefined,
 			"postcode":undefined,
-			"country":undefined
+			"country":undefined,
+			"avatar":undefined
 		};
-
 	}
+	//Handle the form inputs along with file upload to set the global context states
 	inputHandler= (e) =>{
 		this.setState({
 			[e.target.name]:e.target.value
 		})
 	}
 	render(){
+		// values to be provided to the consumer components
 		let value = {
 						state:{...this.state},
 						props:{...this.props},
 						inputHandler:this.inputHandler
 					}
+		// render the component by wraping around context provider so the <Consumer> can be used in their components
 		return <Context.Provider value={value}>
 			{this.props.children}
 		</Context.Provider>

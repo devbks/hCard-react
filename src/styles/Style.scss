@@ -14,16 +14,12 @@ $action-color : #3FA9E2;
     max-width: 1000px;
     margin: 0px auto;
     display: grid;
-    // grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
     grid-template-columns: 4% 1fr 4% 1fr 4%;
-    // background: #fff;
     .bg-fill{
         background: #fff;
     }
     .segment
     {
-        // width: 100%;
-        // min-width: 320px;
         &:nth-child(2)
         {
             background: #fff;
@@ -39,7 +35,6 @@ $action-color : #3FA9E2;
             display: flex;
             padding:50px 0px 50px 0px;
             justify-content: center;
-            // padding-left: 40px;
             align-items: center;
             background: #E6E8EB;
         }
@@ -114,7 +109,7 @@ $action-color : #3FA9E2;
             border-radius: 4px;
             outline: 0px;
             cursor: pointer;
-            &:first-child
+            &:nth-child(2)
             {
                 background: rgba($primary-color,0.7);
                 box-shadow: 0px 2px 0px rgba($primary-color,0.9);

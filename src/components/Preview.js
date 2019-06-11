@@ -16,7 +16,7 @@ const Preview = () => {
                             (ctx.state.lname)? ctx.state.lname.charAt(0).toUpperCase()+ctx.state.lname.slice(1): null
                         }
                         </h2>
-                        <img style={{"margin":"20px","marginBottom":"-20px"}} height={80} width={80} src={require("../assets/user.png")}/>
+                        <img id="avatar" style={{"margin":"20px","marginBottom":"-20px"}} height={80} width={80} src={(ctx.state.avatar)?ctx.state.avatar:require("../assets/user.jpg")}/>
                     </div>
                     <div className="hcard-content" style={{"padding":"20px"}}>
                         <p style={{"borderBottom":"1px solid black","display":"block","width":"100%"}}>
