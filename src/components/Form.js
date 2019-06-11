@@ -6,7 +6,7 @@ function openFileDialog(fileUpload){
     document.getElementById("avatar-file").addEventListener("change",(e)=>{
         let ext = e.target.value.substr(e.target.value.length-4,e.target.value.length);
         let valid = [".png",".jpg","jpeg"];
-        if( valid.indexOf(ext)>=0){
+        if( valid.indexOf(ext.toLowerCase())>=0){
             fileUpload({
                 "target":{
                     "name":e.target.name,
